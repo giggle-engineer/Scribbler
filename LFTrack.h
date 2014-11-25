@@ -31,7 +31,7 @@
 @class LFWebService;
 
 @interface LFTrack : NSObject {
-	LFWebService *lastfm;
+	LFWebService *__strong lastfm;
 	NSString *title;
 	NSString *artist;
 	NSString *album;
@@ -53,7 +53,7 @@
 @property(assign) NSUInteger albumPosition;
 @property(copy) NSString *mbID;
 @property(assign) CGFloat duration;
-@property(assign) LFWebService *webService;
+@property(strong) LFWebService *webService;
 
 // Track control methods
 - (void)play;
