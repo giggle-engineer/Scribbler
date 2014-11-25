@@ -56,7 +56,7 @@
 							([track title] != nil) ? [track title] : @"", @"track",
 							([track artist] != nil) ? [track artist] : @"", @"artist",
                             ([track album] != nil) ? [track album] : @"", @"album",
-                            ([track albumPosition] > 0) ? [NSString stringWithFormat:@"%u", [track albumPosition]] : @"", @"trackNumber",
+                            ([track albumPosition] > 0) ? [NSString stringWithFormat:@"%lu", (unsigned long)[track albumPosition]] : @"", @"trackNumber",
 							([track mbID] != nil) ? [track mbID] : @"", @"mbid",
                             [NSString stringWithFormat:@"%0.0f", [track duration]], @"duration",
 							[delegate APIKey], @"api_key",
